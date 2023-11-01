@@ -11,7 +11,7 @@ def verification():
 
 
 @app.route('/health-check', methods=['GET'])
-def verification():
+def health_check():
     return '', 200
 
 
