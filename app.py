@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/verification', methods=['GET'])
 def verification():
-    data = request.get_json()
+    data = request.args
     if data.get("hub.mode") == "subscribe" and data.get("hub.verify_token") == "test":
         return data.get("hub.challenge"), 200
 
