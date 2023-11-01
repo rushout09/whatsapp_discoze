@@ -10,5 +10,10 @@ def verification():
         return data.get("hub.challenge"), 200
 
 
+@app.route('/health-check', methods=['GET'])
+def verification():
+    return '', 200
+
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=7000)
